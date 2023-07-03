@@ -1,0 +1,167 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+  
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background-color: rgb(49, 49, 49);
+}
+
+
+#titulo{
+    padding-top: 5rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: 400;
+    font-size: medium;
+}
+
+#whole-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#input-container{
+    padding: 0 1rem;
+    width: 15rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: 2rem;
+}
+
+#input-country{
+    flex-grow: 1;
+    outline: none;
+    color: white;
+    width: 50%;
+    background-color: transparent;
+}
+
+#input-country::placeholder{
+    color: white;
+}
+
+#country-info{
+    padding: 0.5rem;
+    margin: auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+     margin-top: 3rem;
+    font-size: small;
+    color: #e7e5e4;
+    font-weight: 300;
+}
+
+.infospan{
+    font-weight: 500;
+}
+
+#imagen{
+    width: 50%;
+    align-self: center;
+    margin-bottom: 3rem;
+    border-radius: 0.5rem;
+}
+
+@media(min-width:768px){
+
+
+    #titulo{
+        padding-top: 5rem;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-weight: 400;
+        font-size: large;
+    }
+
+
+    #input-container{
+        padding: 0 1rem;
+        width: 25rem;
+        height: 3rem;
+        display: flex;
+        justify-content: center;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        margin-top: 2rem;
+    }
+
+    #country-info{
+        padding: 0.5rem;
+        margin: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+         margin-top: 3rem;
+        font-size: 1rem;
+        color: #e7e5e4;
+        font-weight: 300;
+    }
+
+
+} 
+
+@media(min-width:1440px){
+
+
+    #titulo{
+        padding-top: 5rem;
+        display: flex;
+        justify-content: center;
+        color: white;
+        font-weight: 400;
+        font-size: 3rem;   
+    }
+
+
+    #input-container{
+        padding: 0 1rem;
+        width: 40rem;
+        height: 5rem;
+        display: flex;
+        justify-content: center;
+        border: 2px solid rgb(255, 255, 255);
+        border-radius: 10px;
+        margin-top: 2rem;
+    }
+
+    #input-country::placeholder{
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    #country-info{
+        padding: 0.5rem;
+        margin: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+         margin-top: 3rem;
+        font-size: 2rem;
+        color: #e7e5e4;
+        font-weight: 300;
+    }
+
+
+} 
