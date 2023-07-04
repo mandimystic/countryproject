@@ -2,6 +2,7 @@
 const form = document.querySelector("#input-form");
 const inputCountry = document.querySelector("#input-country");
 const countryInfo = document.querySelector("#country-info");
+const loader = document.querySelector("#loader");
 
 
 let countries = []
@@ -21,12 +22,21 @@ const getWeatherData  = async (lat,lon) => {
 }
 
 
+
 const getCountries = async () => {
 
 try {
+    
+    inputCountry.style.display = "none"
+
 
     const response = await (await fetch(`https://restcountries.com/v3.1/all`)).json();
     countries = response; 
+
+    if (response){
+        loader.style.display = "none";
+        inputCountry.style.display = "flex"
+    }
 
 } catch (error) {
     console.log(error);
@@ -61,6 +71,7 @@ inputCountry.addEventListener("input", async (e) =>{
 
     }
 
+
     const countryListInnerHtml = [];
 
 
@@ -83,6 +94,7 @@ inputCountry.addEventListener("input", async (e) =>{
             <p class="info"> País: <span class="infospan">${name}</span></p><br><br>`;
 
         }else{
+            
             const weatherResponse = await getWeatherData(lat,lon);
             const temperature = weatherResponse.main.temp;
             const currentWeather = weatherResponse.weather[0].description;
